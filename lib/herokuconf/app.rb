@@ -10,6 +10,7 @@ module HerokuConf
     end
 
     def configure!(keys = nil)
+      return if ENV['DYNO']
       pairs = config_vars
       pairs.select! { |k, _| keys.include? k } if keys
       pairs.each { |k, v| ENV[k] = v }
