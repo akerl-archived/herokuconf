@@ -10,19 +10,15 @@ module HerokuConf
     end
 
     def configure!(keys = nil)
-      p keys
-      p config_vars
+      pairs = config_vars
+      pairs.select! { |k, _| keys.include? k } if keys
+      pairs.each { |k, v| ENV[k] = v }
     end
 
     private
 
     def config_vars
-      api.request(
-        expects: 200,
-        method: :get,
-        path: "/apps/#{app}/config_vars",
-        query: { 'symbolic' => true }
-      ).body
+      client.get_config_vars(app).body
     end
 
     def app
