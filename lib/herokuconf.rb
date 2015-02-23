@@ -7,7 +7,7 @@ module HerokuConf
   class << self
     DEFAULT_OPTIONS = {
       app: nil,
-      keys: []
+      keys: nil
     }
 
     def configure!(params = {})
