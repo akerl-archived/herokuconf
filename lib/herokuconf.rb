@@ -12,9 +12,9 @@ module HerokuConf
 
     def configure!(params = {})
       return if ENV['DYNO']
-      options = DEFAULT_OPTIONS.dup.merge! params
-      pairs = config_vars(options[:app])
-      pairs.select! { |k, _| options[:keys].include? k } if keys
+      app, keys = DEFAULT_OPTIONS.dup.merge!(params).values_at(:app, :keys)
+      pairs = config_vars(app)
+      pairs.select! { |k, _| keys.include? k } if keys
       pairs.each { |k, v| ENV[k] = v }
     end
 
