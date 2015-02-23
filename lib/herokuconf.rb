@@ -1,3 +1,6 @@
+require 'heroku-api'
+require 'netrc'
+
 ##
 # Base module for HerokuConf
 module HerokuConf
