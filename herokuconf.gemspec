@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'herokuconf'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.date        = Time.now.strftime('%Y-%m-%d')
 
   s.summary     = 'Configure local environment based on Heroku config variables'
