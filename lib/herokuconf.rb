@@ -7,14 +7,18 @@ module HerokuConf
   class << self
     DEFAULT_OPTIONS = {
       app: nil,
-      keys: nil
+      keys: nil,
+      exclude: nil
     }
 
     def configure!(params = {})
       return if ENV['DYNO']
-      app, keys = DEFAULT_OPTIONS.dup.merge!(params).values_at(:app, :keys)
+      app, keys, exclude = DEFAULT_OPTIONS.dup.merge!(params).values_at(
+        :app, :keys, exclude
+      )
       pairs = config_vars(app)
       pairs.select! { |k, _| keys.include? k } if keys
+      pairs.reject! { |k, _| exclude.include? k } if exclude
       pairs.each { |k, v| ENV[k] = v }
     end
 
