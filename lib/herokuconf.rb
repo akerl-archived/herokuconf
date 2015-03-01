@@ -8,7 +8,7 @@ module HerokuConf
     DEFAULT_OPTIONS = {
       app: nil,
       keys: nil,
-      exclude: nil
+      exclude: ['RACK_ENV']
     }
 
     def configure!(params = {})
