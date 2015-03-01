@@ -14,7 +14,7 @@ module HerokuConf
     def configure!(params = {})
       return if ENV['DYNO']
       app, keys, exclude = DEFAULT_OPTIONS.dup.merge!(params).values_at(
-        :app, :keys, exclude
+        :app, :keys, :exclude
       )
       pairs = config_vars(app)
       pairs.select! { |k, _| keys.include? k } if keys
