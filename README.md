@@ -1,3 +1,5 @@
+**Inactive Project:** I no longer use this, as I've been migrating my projects off Heroku's new less-than-stellar free tier onto my own VMs with Docker containers.
+
 herokuconf
 =========
 
