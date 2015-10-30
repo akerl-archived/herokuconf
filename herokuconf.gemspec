@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files`.split
   s.test_files  = `git ls-files spec/*`.split
 
-  s.add_dependency 'netrc', '~> 0.10.2'
+  s.add_dependency 'netrc', '~> 0.11.0'
   s.add_dependency 'heroku-api', '~> 0.3.22'
 
   s.add_development_dependency 'rubocop', '~> 0.34.0'
