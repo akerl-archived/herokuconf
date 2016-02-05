@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'netrc', '~> 0.11.0'
   s.add_dependency 'heroku-api', '~> 0.3.22'
 
-  s.add_development_dependency 'rubocop', '~> 0.36.0'
+  s.add_development_dependency 'rubocop', '~> 0.37.0'
   s.add_development_dependency 'rake', '~> 10.5.0'
   s.add_development_dependency 'coveralls', '~> 0.8.0'
   s.add_development_dependency 'rspec', '~> 3.4.0'
