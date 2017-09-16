@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.date        = Time.now.strftime('%Y-%m-%d')
 
   s.summary     = 'Configure local environment based on Heroku config variables'
-  s.description = "Configure local environment based on Heroku config variables"
+  s.description = 'Configure local environment based on Heroku config variables'
   s.authors     = ['Les Aker']
   s.email       = 'me@lesaker.org'
   s.homepage    = 'https://github.com/akerl/herokuconf'
