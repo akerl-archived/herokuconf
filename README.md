@@ -4,7 +4,6 @@ herokuconf
 =========
 
 [![Gem Version](https://img.shields.io/gem/v/herokuconf.svg)](https://rubygems.org/gems/herokuconf)
-[![Dependency Status](https://img.shields.io/gemnasium/akerl/herokuconf.svg)](https://gemnasium.com/akerl/herokuconf)
 [![Code Climate](https://img.shields.io/codeclimate/github/akerl/herokuconf.svg)](https://codeclimate.com/github/akerl/herokuconf)
 [![Coverage Status](https://img.shields.io/coveralls/akerl/herokuconf.svg)](https://coveralls.io/r/akerl/herokuconf)
 [![Build Status](https://img.shields.io/travis/akerl/herokuconf.svg)](https://travis-ci.org/akerl/herokuconf)
